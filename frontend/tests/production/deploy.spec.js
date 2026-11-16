@@ -22,11 +22,23 @@ test('build incluye reglas Pages, recursos y ninguna configuración privada', as
   expect(scripts.includes('wa.me/000000000')).toBe(false);
   expect(assets.some(name => name.endsWith('.map'))).toBe(false);
 });
-test('home de producción conserva contacto sin configurar deshabilitado', async ({ page }) => {
+test('home de producción ofrece el contacto comercial configurado', async ({ page }) => {
   await page.goto('/');
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
-  await expect(page.getByRole('button', { name: 'WhatsApp · Próximamente' })).toBeDisabled();
-  await expect(page.locator('a[href*="wa.me"]')).toHaveCount(0);
+  await expect(page.locator('body')).not.toContainText(/\$\s*3[.,]?500|precio de referencia|carta digital estándar/i);
+  await expect(page.locator('#contacto')).toContainText('presupuesto personalizado');
+  await expect(page.locator('#contacto .commercial-phone')).toHaveText('WhatsApp: +598 91 602 323');
+  const contacts = page.getByRole('link', { name: 'Consultá por WhatsApp', exact: true });
+  await expect(contacts).toHaveCount(2);
+  for (const contact of await contacts.all()) {
+    const url = new URL(await contact.getAttribute('href'));
+    expect(url.origin).toBe('https://wa.me');
+    expect(url.pathname).toBe('/59891602323');
+    expect(url.searchParams.get('text')).toBe('Hola, vi Tu Menú Digital y me gustaría recibir información sobre las cartas digitales para mi negocio');
+    await expect(contact).toHaveAttribute('target', '_blank');
+    await expect(contact).toHaveAttribute('rel', 'noopener noreferrer');
+  }
+  await expect(page.getByText('El canal comercial está pendiente de configuración.')).toHaveCount(0);
   await expect(page.getByRole('link', { name: 'Abrir menú' })).toHaveCount(4);
 });
 for (const id of templates) test(`${id}: acceso directo, recarga, imágenes, pedido y QR sin localhost`, async ({ page }) => {
