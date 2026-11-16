@@ -1,0 +1,97 @@
+.urbano {
+  --urban-cream: #f6f0e3;
+  --urban-muted: #b8b3a9;
+  background: #181918;
+  color: var(--urban-cream);
+}
+.urban-header {
+  max-width: 1220px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.urban-wordmark { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.urban-mark { display: grid; place-items: center; flex-shrink: 0; width: 40px; height: 40px; background: var(--primary); color: #191919; font: 900 29px Impact, 'Arial Narrow', sans-serif; transform: rotate(-5deg); border-radius: 6px; }
+.urban-header .identity { font: 900 clamp(16px, 4.6vw, 22px) Arial, sans-serif; letter-spacing: -0.8px; }
+.urban-header > a { font-size: 13px; white-space: nowrap; display: flex; align-items: center; min-height: 44px; }
+.urban-hero { max-width: 1220px; margin: auto; display: grid; position: relative; }
+.urban-hero-copy { padding: 28px 22px 32px; min-width: 0; }
+.urban-kicker { display: flex; align-items: center; gap: 8px; font-size: 10px; font-weight: 700; letter-spacing: 1.4px; color: var(--primary); }
+.urban-kicker i { display: block; width: 7px; height: 7px; background: currentColor; border-radius: 50%; }
+.restaurant .urban-hero h1 { font: 900 clamp(64px, 17vw, 104px)/0.94 Impact, 'Arial Narrow', 'Arial Black', sans-serif; text-transform: uppercase; letter-spacing: -2px; max-width: 9ch; margin: 26px 0 24px; }
+.urban-hero-copy > p { max-width: 360px; color: var(--urban-muted); font-size: 15px; line-height: 1.75; margin-bottom: 25px; }
+.urban-hero .button { background: var(--primary); color: #191919; border-radius: 5px; padding: 17px 20px; gap: 22px; font-size: 14px; font-weight: 800; }
+.urban-hero-photo { position: relative; min-width: 0; background: #101110; overflow: hidden; }
+.urban-hero-photo > img { width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; }
+.urban-photo-label { position: absolute; bottom: 18px; right: 18px; padding: 15px; background: var(--urban-cream); color: #1d1e1c; font-size: 10px; line-height: 1.6; letter-spacing: 1px; transform: rotate(-5deg); box-shadow: 0 5px 20px #0003; }
+.urban-photo-label strong { font-size: 15px; letter-spacing: -0.3px; }
+.urban-hero-bottom { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 15px 20px; border-bottom: 1px solid #ffffff24; background: #222320; font-size: 9px; font-weight: 700; letter-spacing: 1px; }
+.urban-hero-bottom > span:nth-child(2) { font-size: 28px; line-height: 1; color: var(--primary); }
+.urban-hero-bottom > span:last-child { display: none; }
+.urban-menu.menu-content { max-width: 1220px; padding: 0 18px 30px; }
+.urban-navigation { position: sticky; top: 0; z-index: 3; background: #181918; padding: 14px 0 0; border-bottom: 1px solid #ffffff24; }
+.urban-nav-label { display: block; font-size: 10px; color: var(--urban-muted); font-weight: 700; letter-spacing: 1.7px; margin-bottom: 3px; }
+.urbano .categories { position: static; padding-bottom: 14px; margin-right: -18px; padding-right: 18px; gap: 8px; }
+.urbano .categories button { border: 1px solid #4b4b45; color: var(--urban-cream); background: #222320; border-radius: 5px; font-weight: 600; padding: 12px 18px; }
+.urbano .categories button[aria-pressed=true] { background: var(--primary); border-color: var(--primary); color: #191919; }
+.urban-menu-heading { display: flex; align-items: end; justify-content: space-between; gap: 12px; padding: 34px 0 24px; }
+.urban-menu-heading .eyebrow { color: var(--primary); font-size: 9px; margin-bottom: 10px; letter-spacing: 1.3px; }
+.urbano .category-title { font: 900 clamp(32px, 9vw, 50px)/1 Impact, 'Arial Narrow', 'Arial Black', sans-serif; text-transform: uppercase; letter-spacing: -0.5px; margin: 0; overflow-wrap: anywhere; }
+.urban-category-count { text-align: right; flex-shrink: 0; }
+.urban-category-count > strong { font-size: 23px; font-weight: 500; }
+.urban-category-count strong > span { font-size: 12px; color: var(--urban-muted); }
+.urban-category-count > small { display: none; }
+.urban-products { display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; }
+.urbano .product { background: #242522; border: 1px solid #ffffff17; border-radius: 12px; display: flex; flex-direction: column; }
+.urbano .product > img { width: 100%; height: auto; aspect-ratio: 16/11; object-fit: cover; background: #111; }
+.urbano .product-copy { padding: 22px; display: flex; flex-direction: column; flex: 1; }
+.urbano .product h3 { font: 900 29px/1.06 Impact, 'Arial Narrow', 'Arial Black', sans-serif; text-transform: uppercase; letter-spacing: 0.2px; margin-bottom: 12px; }
+.urbano .product p { color: #c9c5bc; opacity: 1; font-size: 15px; line-height: 1.7; margin-bottom: 22px; }
+.urbano .product-bottom { margin-top: auto; gap: 15px; }
+.urbano .product-bottom > strong { font-size: 25px; font-weight: 700; }
+.urbano .product button { min-height: 48px; background: var(--primary); color: #191919; border-radius: 5px; font-size: 15px; font-weight: 800; padding: 12px 18px; }
+.urban-menu-note { font-size: 13px; color: var(--urban-muted); border-top: 1px solid #ffffff24; padding-top: 24px; margin-top: 35px; line-height: 1.7; }
+.urbano .cart-trigger { background: var(--primary); color: #191919; border: 1px solid #ffb295; border-radius: 8px; font-weight: 700; }
+.urbano .cart-dialog .button { background: var(--primary); color: #191919; }
+.urbano .menu-footer { color: var(--urban-cream); }
+@media (min-width: 600px) {
+  .urban-header { padding: 25px 30px; }
+  .urban-hero-copy { padding: 40px 30px; }
+  .urban-hero-bottom > span:last-child { display: block; }
+  .urban-hero-photo > img { aspect-ratio: 16/10; }
+  .urban-menu.menu-content { padding-inline: 30px; }
+  .urbano .categories { margin-right: 0; padding-right: 0; }
+  .urban-products { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .urban-category-count > small { display: block; color: var(--urban-muted); font-size: 12px; margin-top: 5px; }
+}
+@media (min-width: 768px) {
+  .urban-hero { grid-template-columns: 0.95fr 1.05fr; padding: 0 30px; align-items: stretch; }
+  .urban-hero-copy { padding: 45px 22px 45px 0; }
+  .restaurant .urban-hero h1 { font-size: clamp(72px, 7.4vw, 110px); }
+  .urban-hero-photo { border-radius: 12px; }
+  .urban-hero-photo > img { height: 100%; min-height: 440px; aspect-ratio: auto; }
+  .urban-hero-bottom { grid-column: 1/-1; margin-top: 28px; border-radius: 6px; font-size: 10px; }
+  .urban-navigation { display: flex; align-items: center; gap: 25px; padding-top: 12px; }
+  .urban-nav-label { max-width: 75px; line-height: 1.6; margin-bottom: 12px; flex-shrink: 0; }
+  .urbano .categories { min-width: 0; flex: 1; }
+  .urban-menu-heading { padding-block: 45px 30px; }
+  .urban-products .product:first-child:has(> img) { grid-column: 1/-1; display: grid; grid-template-columns: 1.2fr 1fr; }
+  .urban-products .product:first-child > img { height: 100%; min-height: 290px; aspect-ratio: auto; }
+  .urban-products .product:first-child .product-copy { padding: 30px; justify-content: center; }
+  .urban-products .product:first-child .product-bottom { margin-top: 15px; }
+  .urban-products .product:first-child h3 { font-size: 38px; }
+}
+@media (min-width: 1100px) {
+  .urban-header .identity { font-size: 25px; }
+  .urban-products { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .urban-products .product:first-child:has(> img) { grid-column: span 2; }
+  .urban-products .product:first-child > img { min-height: 310px; }
+  .urban-products .product:first-child .product-copy { padding: 25px; }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .urbano .product { transition: border-color 160ms ease; }
+  .urbano .product:hover { border-color: #ff623980; }
+}
