@@ -10,6 +10,7 @@ const captions = {
 export default function ModelCard({ restaurant: r, index }) {
   return <article className={`demo-card card-${r.id}`} aria-describedby={`qr-${r.id}`}>
     <Link className="demo-card-link" to={`/demo/${r.id}`} aria-labelledby={`model-action-${r.id} model-name-${r.id}`} aria-describedby={`model-description-${r.id}`}>
+      <span className="demo-ribbon" aria-hidden="true">VER EJEMPLO {index + 1}</span>
       <div className="demo-visual">
         <img src={r.heroImage} alt={`Propuesta gastronómica ${r.templateName}`} loading="lazy"/>
         <span className="demo-number">0{index + 1}</span>
